@@ -11,7 +11,7 @@ Extra:
 
 #include <bits/stdc++.h>
 #include <iostream>
-#include "cuadrado.h"
+#include "figura.h"
 using namespace std;
 
 
@@ -40,14 +40,35 @@ using namespace std;
 
 int main () {
 
-    Square s(5);
+    Cuadrado s(5);
     cout << s.getArea() << endl; // 25
-    Rectangle r(5,5);
+    Rectangulo r(5,5);
     cout << r.getArea() << endl; // 25
-    Triangle t(5, 10);
+    Triangulo t(5, 10);
     cout << t.getArea() << endl; // 25
     return 0;
 }
-```
-Notas
-Puedes hacer uso de tus trabajos pasados así como de la documentación de C++
+
+
+Figura::Figura()
+{
+    this->b=0;
+    this->h=0; 
+}
+
+Figura::Figura(int b, int h)
+{
+    this->b=b;
+    this->h=h; 
+  
+}
+
+void Figura::setArea(float a)
+{
+  this->a = a;
+}
+
+float Figura::getArea()
+{
+  return this->a;
+}
